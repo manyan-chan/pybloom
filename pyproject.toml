@@ -33,8 +33,8 @@ classifiers = [
 
 [project.urls]
 # *** UPDATE URLS (EXAMPLE) ***
-Homepage = "https://github.com/yourusername/pybloom" # CHANGE_ME
-Repository = "https://github.com/yourusername/pybloom" # CHANGE_ME
+Homepage = "https://github.com/manyan-chan/pybloom"
+Repository = "https://github.com/manyan-chan/pybloom.git" 
 
 [tool.setuptools.packages.find]
 where = ["."]

@@ -31,8 +31,8 @@ You can install this package directly from the source directory using pip:
 
 ```bash
 # Clone the repository (if you haven't already)
-# git clone https://github.com/yourusername/pybloom.git # <-- Updated name
-# cd pybloom # <-- Updated name
+# git clone https://github.com/manyan-chan/pybloom.git
+# cd pybloom
 
 # Install in editable mode (good for development)
 pip install -e .
