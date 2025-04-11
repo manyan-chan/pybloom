@@ -1,0 +1,45 @@
+# Python Bytecode and Cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / Packaging
+build/
+dist/
+*.egg-info/
+*.egg
+wheelhouse/
+*.tar.gz
+*.whl
+
+# Virtual Environments
+.env
+.venv
+venv/
+ENV/
+env/
+env.bak/
+venv.bak/
+
+# IDE / Editor specific files
+.idea/
+.vscode/
+*.swp
+*~
+
+# Test Artifacts
+.coverage
+coverage.xml
+htmlcov/
+.pytest_cache/
+nosetests.xml
+junit.xml
+
+# Type Checking
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Secrets (if any added later)
+*.log
+local_settings.py

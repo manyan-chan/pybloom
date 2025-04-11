@@ -1,0 +1,43 @@
+# pyproject.toml
+
+[build-system]
+requires = ["setuptools>=42"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pybloom"
+version = "0.1.0"
+description = "A simple Bloom Filter implementation in Python with no external dependencies."
+readme = "README.md"
+requires-python = ">=3.7"
+license = { file = "LICENSE" }
+authors = [
+    { name = "Richard Chan", email = "richard.mychan@gmail.com" },
+]
+keywords = ["bloom filter", "probabilistic", "data structure", "set membership", "no dependencies", "pybloom"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Utilities",
+]
+
+[project.urls]
+# *** UPDATE URLS (EXAMPLE) ***
+Homepage = "https://github.com/yourusername/pybloom" # CHANGE_ME
+Repository = "https://github.com/yourusername/pybloom" # CHANGE_ME
+
+[tool.setuptools.packages.find]
+where = ["."]
+# *** UPDATE INCLUDE TO FIND THE RENAMED PACKAGE DIRECTORY ***
+include = ["pybloom*"]
+exclude = ["tests*", "examples*"]

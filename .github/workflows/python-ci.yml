@@ -1,0 +1,47 @@
+# .github/workflows/python-ci.yml
+
+name: Python Package CI
+
+on:
+  push:
+    branches: ["main", "develop"] # Adjust branches as needed
+  pull_request:
+    branches: ["main"] # Adjust branches as needed
+
+jobs:
+  build_and_test:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false # Don't cancel all jobs if one Python version fails
+      matrix:
+        # Test against the minimum supported version and recent versions
+        python-version: ["3.7", "3.8", "3.9", "3.10", "3.11", "3.12"]
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4 # Use latest stable version
+
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v5 # Use latest stable version
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      # Optional: Install build tool to verify packaging works
+      # - name: Install build dependencies
+      #  run: python -m pip install build
+
+      # Optional: Linting check (e.g., using ruff)
+      # - name: Install linter (example: ruff)
+      #   run: python -m pip install ruff
+      # - name: Lint with Ruff
+      #   run: ruff check .
+
+      # Run tests using the built-in unittest module
+      # Ensure tests are run from the project root directory context
+      - name: Run tests
+        run: python -m unittest discover -v tests # -v for verbose output
+
+
+    # Optional: Verify package can be built
+    # - name: Build package
+    #  run: python -m build --sdist --wheel --outdir dist/ .
